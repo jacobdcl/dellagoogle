@@ -4,7 +4,7 @@ const cloudinary = require("cloudinary").v2;
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5001; // Use the port provided by Render
+const PORT = process.env.PORT || 5001; // Render will provide the port
 
 // Enable CORS and JSON parsing middleware
 app.use(cors());
@@ -35,6 +35,6 @@ app.get("/api/images", async (req, res) => {
 });
 
 // Start the server using the PORT provided by Render
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
 });

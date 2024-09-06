@@ -4,7 +4,7 @@ const cloudinary = require("cloudinary").v2;
 const cors = require("cors");
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || '0.0.0.0'
 
 // Enable CORS and JSON parsing middleware
 app.use(cors());
